@@ -1,0 +1,9 @@
+#cloud-config
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDO28qfsKcXOKbaZc28eIRpipTkXS961xO6HQchT0M2sAuzWYQj9oBwoHAIrrcGYgjkym0FMzetq6OGSPqkbCwka4i2Pb1tRBJEJDObsN3sUzuMfIxvQlRcng7ffjslROH9yBizlUv86wrhpIH8jW+nTeGc5SEpZGG1sTg1k5bKpYpKwM3VY3oY/nIW+jTHx80dO/SualK2AgE0F6qXOCptCd56irSN3MWuY08BZDOy1itNUkRF+9bGRkz3JfA/Nb40ym4BPL62gEn1ZnRY/kU+h9BFF/S5jxoisUPDyzrqIhk1a8JVsDr7BlsQLh8aBf3lY997xc//3e3SpKCQvsjZ ging@GingwudeMacBook-Pro.local
+write_files:
+  - path: /etc/environment
+    content: |
+      http_proxy=http://192.168.64.1:7890
+      https_proxy=http://192.168.64.1:7890
+    append: true
